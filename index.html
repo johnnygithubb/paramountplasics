@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth scroll-pt-24">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paramount Plastics | Fabrication & Repair Corpus Christi</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind Config for Fonts -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                        oswald: ['Oswald', 'sans-serif'],
+                    },
+                    colors: {
+                        slate: {
+                            850: '#151f2e', // Custom darker shade
+                            950: '#020617',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Base Styles */
+        body {
+            background-color: #0f172a; /* slate-900 */
+            color: #e2e8f0; /* slate-200 */
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+        }
+
+        /* Industrial Texture Background */
+        .industrial-texture {
+            background-image: radial-gradient(circle, #334155 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.1;
+        }
+
+        /* Selection Color */
+        ::selection {
+            background-color: #ea580c; /* orange-600 */
+            color: white;
+        }
+        
+        /* Skew Helper */
+        .skew-fix {
+            transform: skewX(-10deg);
+        }
+        .unskew-fix {
+            transform: skewX(10deg);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-3 md:py-5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex flex-col">
+                <span class="text-xl md:text-2xl font-bold tracking-tighter text-white font-oswald">
+                    PARAMOUNT <span class="text-orange-600">PLASTICS</span>
+                </span>
+                <span class="text-[0.6rem] md:text-xs text-slate-400 tracking-widest font-bold">FABRICATION & REPAIR • CORPUS CHRISTI</span>
+            </div>
+
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#services" class="text-sm font-bold tracking-wide hover:text-orange-500 transition-colors uppercase">Services</a>
+                <a href="#work" class="text-sm font-bold tracking-wide hover:text-orange-500 transition-colors uppercase">Work</a>
+                <a href="#about" class="text-sm font-bold tracking-wide hover:text-orange-500 transition-colors uppercase">About</a>
+                <a href="#contact" class="text-sm font-bold tracking-wide hover:text-orange-500 transition-colors uppercase">Contact</a>
+                
+                <a href="tel:+13619050555" class="flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white px-5 py-2 font-bold text-sm uppercase skew-fix transition-all">
+                    <span class="unskew-fix flex items-center gap-2">
+                        <i data-lucide="phone" class="w-4 h-4"></i> (361) 905-0555
+                    </span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="text-white hover:text-orange-500 transition-colors p-2">
+                    <i data-lucide="menu" class="w-8 h-8"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 absolute w-full left-0 top-full shadow-xl">
+            <div class="flex flex-col px-4 py-6 space-y-4">
+                <a href="#services" class="mobile-link text-left text-xl font-bold uppercase hover:text-orange-500 py-3 border-b border-slate-800">Services</a>
+                <a href="#work" class="mobile-link text-left text-xl font-bold uppercase hover:text-orange-500 py-3 border-b border-slate-800">Work</a>
+                <a href="#about" class="mobile-link text-left text-xl font-bold uppercase hover:text-orange-500 py-3 border-b border-slate-800">About</a>
+                <a href="#contact" class="mobile-link text-left text-xl font-bold uppercase hover:text-orange-500 py-3 border-b border-slate-800">Contact</a>
+                <a href="tel:+13619050555" class="w-full text-center bg-orange-600 hover:bg-orange-700 text-white py-4 font-bold uppercase mt-2 text-lg rounded-sm">
+                    Call Now
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img 
+                src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                alt="Welding sparks in workshop" 
+                class="w-full h-full object-cover opacity-40 grayscale"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left pt-16 md:pt-0">
+            <div class="inline-block border border-orange-600/50 bg-orange-600/10 backdrop-blur-sm px-4 py-1 mb-6">
+                <span class="text-orange-500 font-bold tracking-widest text-xs uppercase">1001 Waldron Rd, Corpus Christi</span>
+            </div>
+            <h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[0.9] tracking-tighter mb-6 font-oswald">
+                BUILT TO LAST.<br />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-700">
+                    FIXED RIGHT.
+                </span>
+            </h1>
+            <p class="text-base md:text-xl text-slate-300 max-w-2xl mb-10 leading-relaxed font-light mx-auto sm:mx-0">
+                We are Corpus Christi's one-stop fabrication shop. From custom 
+                <strong class="font-bold text-slate-100">boat windshields</strong> and <strong class="font-bold text-slate-100">plastics</strong> to 
+                <strong class="font-bold text-slate-100">heavy metal welding</strong> and <strong class="font-bold text-slate-100">trailer repair</strong>. 
+                If it’s broken, bring it in.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="tel:+13619050555" class="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 font-bold uppercase tracking-wider text-sm transition-all md:text-base flex items-center justify-center gap-2 group shadow-lg shadow-orange-900/20">
+                    Call For Quote <i data-lucide="phone" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+                <a href="#services" class="border-2 border-slate-600 hover:border-white text-white px-8 py-4 font-bold uppercase tracking-wider text-sm transition-all md:text-base flex items-center justify-center">
+                    View Our Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="bg-slate-950 py-8 md:py-12 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 flex flex-wrap justify-center md:justify-between gap-6 md:gap-8 items-center text-slate-400 font-bold uppercase tracking-widest text-xs md:text-sm">
+            <div class="flex items-center gap-3">
+                <i data-lucide="check-circle" class="text-orange-600 w-5 h-5"></i> Marine Grade
+            </div>
+            <div class="flex items-center gap-3">
+                <i data-lucide="check-circle" class="text-orange-600 w-5 h-5"></i> Custom Fabrication
+            </div>
+            <div class="flex items-center gap-3">
+                <i data-lucide="check-circle" class="text-orange-600 w-5 h-5"></i> Commercial
+            </div>
+            <div class="flex items-center gap-3">
+                <i data-lucide="check-circle" class="text-orange-600 w-5 h-5"></i> Fast Turnaround
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 md:py-24 bg-slate-900 relative">
+        <div class="absolute inset-0 industrial-texture pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">What We Do</h2>
+                <div class="h-1 w-24 bg-orange-600 mx-auto"></div>
+                <p class="mt-4 text-slate-400 max-w-2xl mx-auto">We don't just sell plastic. We cut, bend, weld, and repair just about anything.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Service 1: Plastics -->
+                <div class="bg-slate-800/50 border border-slate-700 p-6 md:p-8 hover:border-orange-600/50 transition-colors group">
+                    <div class="bg-slate-900 w-16 h-16 flex items-center justify-center mb-6 group-hover:bg-orange-600 transition-colors rounded-sm">
+                        <i data-lucide="shield" class="text-white w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Plastic Fab</h3>
+                    <p class="text-slate-400 mb-4 text-sm leading-relaxed">
+                        Custom cutting, bending, and polishing. Acrylics, polycarbonate, HDPE, and Starboard.
+                    </p>
+                    <ul class="text-sm text-slate-300 space-y-2">
+                        <li class="flex items-center gap-2"><div class="w-1 h-1 bg-orange-500"></div> Display Cases</li>
+                        <li class="flex items-center gap-2"><div class="w-1 h-1 bg-orange-500"></div> Tanks & Liners</li>
+                        <li class="flex items-center gap-2"><div class="w-1 h-1 bg-orange-500"></div> CNC Routing</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2: Marine -->
+                <div class="bg-slate-800/50 border border-slate-700 p-6 md:p-8 hover:border-orange-600/50 transition-colors group">
+                    <div class="bg-slate-900 w-16 h-16 flex items-center justify-center mb-6 group-hover:bg-orange-600 transition-colors rounded-sm">
+                        <i data-lucide="anchor" class="text-white w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Marine</h3>
+                    <p class="text-slate-400 mb-4 text-sm leading-relaxed">
+                        Specializing in boat windshield replacements. If yours is cracked or yellowed, we make a new one.
+                    </p>
+                    <ul class="text-sm text-slate-300 space-y-2">
+                        <li class="flex items-center gap-2"><div class="w-1 h-1 bg-orange-500"></div> Windshields</li>
+                        <li class="flex items-center gap-2"><div class="w-1 h-1 bg-orange-500"></div> Hatch Covers</li>
+                        <li class="flex items-center gap-2"><div class="w-1 h-1 bg-orange-500"></div> Dash Panels</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3: Metal -->
+                <div class="bg-slate-800/50 border border-slate-700 p-6 md:p-8 hover:border-orange-600/50 transition-colors group">
+                    <div class="bg-slate-900 w-16 h-16 flex items-center justify-center mb-6 group-hover:bg-orange-600 transition-colors rounded-sm">
+                        <i data-lucide="hammer" class="text-white w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Metal & Welding</h3>
+                    <p class="text-slate-400 mb-4 text-sm leading-relaxed">
+                        Aluminum, Stainless, and Steel fabrication. From structural repairs to custom brackets.
+                    </p>
+                    <ul class="text-sm text-slate-300 space-y-2">
+                        <li class="flex items-center gap-2"><div class="w-1 h-1 bg-orange-500"></div> TIG / MIG Welding</li>
+                        <li class="flex items-center gap-2"><div class="w-1 h-1 bg-orange-500"></div> Aluminum T-Tops</li>
+                        <li class="flex items-center gap-2"><div class="w-1 h-1 bg-orange-500"></div> Industrial Parts</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4: Trailers -->
+                <div class="bg-slate-800/50 border border-slate-700 p-6 md:p-8 hover:border-orange-600/50 transition-colors group">
+                    <div class="bg-slate-900 w-16 h-16 flex items-center justify-center mb-6 group-hover:bg-orange-600 transition-colors rounded-sm">
+                        <i data-lucide="truck" class="text-white w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Trailer Repair</h3>
+                    <p class="text-slate-400 mb-4 text-sm leading-relaxed">
+                        Don't get stranded. We fix boat and utility trailers to keep you on the road.
+                    </p>
+                    <ul class="text-sm text-slate-300 space-y-2">
+                        <li class="flex items-center gap-2"><div class="w-1 h-1 bg-orange-500"></div> Axle Replacement</li>
+                        <li class="flex items-center gap-2"><div class="w-1 h-1 bg-orange-500"></div> Frame Welding</li>
+                        <li class="flex items-center gap-2"><div class="w-1 h-1 bg-orange-500"></div> Bunks & Rollers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scope of Work Section (Replaces Projects) -->
+    <section id="work" class="py-16 md:py-24 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Scope of Work</h2>
+                <div class="h-1 w-24 bg-orange-600 mb-8"></div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 text-slate-400 leading-relaxed">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-4 uppercase flex items-center gap-2">
+                            <i data-lucide="anchor" class="text-orange-600 w-5 h-5"></i> Marine & Boating
+                        </h3>
+                        <p class="mb-6">
+                            Our marine division specializes in custom fabrication that you can't buy off the shelf. 
+                            We manufacture duplicate windshields for center consoles and walk-arounds, often 
+                            saving customers weeks of wait time compared to OEM parts. We also fabricate 
+                            custom Starboard dash panels, replace rotted hatch covers, and repair aluminum 
+                            T-tops and towers.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-orange-600"></div> Custom Acrylic Windshields</li>
+                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-orange-600"></div> Polycarbonate Enclosures</li>
+                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-orange-600"></div> Aluminum Welding Repairs</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-4 uppercase flex items-center gap-2">
+                             <i data-lucide="wrench" class="text-orange-600 w-5 h-5"></i> Industrial & Trailer
+                        </h3>
+                        <p class="mb-6">
+                            Beyond the water, we keep industry moving. We fabricate safety guards for 
+                            manufacturing equipment, custom fluid tanks, and heavy-duty brackets. 
+                            Our trailer repair shop handles everything from simple bunk replacements 
+                            to complete axle swaps and structural frame welding for boat and utility trailers.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-orange-600"></div> Machine Guards & Covers</li>
+                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-orange-600"></div> Trailer Axles & Suspension</li>
+                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-orange-600"></div> Structural Steel & Aluminum</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Reviews Section -->
+    <section class="py-16 md:py-24 bg-slate-900 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="text-2xl font-bold text-white" style="font-family: 'Product Sans', sans-serif;">Google</span>
+                        <div class="flex gap-0.5">
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-yellow-400"></i>
+                        </div>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">What Customers Say</h2>
+                </div>
+                <a 
+                    href="https://www.google.com/search?q=Paramount+Plastics+Reviews"
+                    target="_blank"
+                    rel="noopener noreferrer" 
+                    class="hidden md:flex items-center gap-2 border border-slate-600 hover:border-white text-white px-6 py-3 font-bold uppercase tracking-wider text-xs transition-colors rounded"
+                >
+                    See More Reviews <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Review 1 -->
+                <div class="bg-slate-800 p-6 md:p-8 rounded-lg border border-slate-700 relative">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-orange-600 flex items-center justify-center font-bold text-white">MS</div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Matt Struve</h4>
+                            <p class="text-slate-400 text-xs">Local Guide · 27 reviews</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-0.5 mb-4">
+                        <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-yellow-400"></i>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        "Highly recommended. Masters of their craft. Attentive, problem solver mentality, precision prototyping and iterating, fast production turnaround time, and an owner that keeps up with communication throughout. This is the company to partner with."
+                    </p>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-slate-800 p-6 md:p-8 rounded-lg border border-slate-700 relative">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center font-bold text-white">ML</div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Mike Lucente</h4>
+                            <p class="text-slate-400 text-xs">Local Guide · 16 reviews</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-0.5 mb-4">
+                        <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-yellow-400"></i>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        "This place is incredible. They always get the job done correctly the first time. The owner is intelligent and good with people, the products they build are amazing. Will definitely always use them for all my boat in plastic manufacturing needs."
+                    </p>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-slate-800 p-6 md:p-8 rounded-lg border border-slate-700 relative">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-green-600 flex items-center justify-center font-bold text-white">MF</div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Mark Farley</h4>
+                            <p class="text-slate-400 text-xs">Local Guide · 367 reviews</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-0.5 mb-4">
+                        <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-yellow-400"></i>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        "Driving this Freightliner tractor from Houston to Corpus, the rear axle tire threw a rock through the rear glass. Searched for plastics place in Corpus and found this. Fabricated a new window with polycarbonate right on the spot... This plastic will never be broken by a rock again. Highly impressed... They truly are a 'plastics blacksmith'."
+                    </p>
+                </div>
+            </div>
+            
+            <a 
+                href="https://www.google.com/search?q=Paramount+Plastics+Reviews"
+                target="_blank"
+                rel="noopener noreferrer" 
+                class="md:hidden w-full flex justify-center items-center gap-2 border border-slate-600 text-white px-6 py-4 font-bold uppercase tracking-wider text-xs mt-6 rounded"
+            >
+                See More Reviews <i data-lucide="arrow-right" class="w-3 h-3"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About / Why Us - Background darkened to slate-950 for contrast -->
+    <section id="about" class="py-16 md:py-24 bg-slate-950 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">NO FLUFF. JUST FABRICATION.</h2>
+                    <div class="space-y-6 text-slate-300 leading-relaxed">
+                        <p>
+                            Paramount Plastics has been serving Corpus Christi and the Coastal Bend for decades. We aren't a big box store where you talk to a cashier who doesn't know what a weld bead looks like.
+                        </p>
+                        <p>
+                            We are a shop of craftsmen. Whether you need a complex industrial prototype or just need your boat trailer welded so you can get back on the water this weekend, we treat every job with the same level of precision.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                            <div class="bg-slate-800 p-4 border-l-4 border-orange-600">
+                                <h4 class="font-bold text-white mb-1">Custom Solutions</h4>
+                                <p class="text-sm text-slate-400">If you can draw it, we can build it.</p>
+                            </div>
+                            <div class="bg-slate-800 p-4 border-l-4 border-orange-600">
+                                <h4 class="font-bold text-white mb-1">Local Experts</h4>
+                                <p class="text-sm text-slate-400">We know the salt air destroys everything. We build to resist it.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative h-64 md:h-96 w-full bg-slate-800 border-2 border-slate-700 p-2">
+                    <img 
+                        src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&q=80&w=1000" 
+                        alt="Fabrication workshop interior" 
+                        class="w-full h-full object-cover grayscale opacity-80"
+                    />
+                    <div class="absolute -bottom-6 -left-6 bg-orange-600 text-white p-4 md:p-6 shadow-xl hidden md:block">
+                        <p class="font-bold text-2xl font-oswald">100%</p>
+                        <p class="text-xs font-bold uppercase tracking-wider">Satisfaction<br/>Guaranteed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-orange-600 relative overflow-hidden">
+        <div class="absolute inset-0 bg-slate-900/10 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="bg-slate-900 p-6 md:p-12 shadow-2xl border border-slate-800">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+                    
+                    <!-- Contact Info -->
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">LET'S GET TO WORK.</h2>
+                        <p class="text-slate-400 mb-8">Stop by the shop or call us directly about your project.</p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-slate-800 p-3 text-orange-500 rounded-sm">
+                                    <i data-lucide="map-pin" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-bold uppercase">Visit The Shop</h4>
+                                    <p class="text-slate-400">1001 Waldron Rd<br/>Corpus Christi, TX</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="bg-slate-800 p-3 text-orange-500 rounded-sm">
+                                    <i data-lucide="phone" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-bold uppercase">Call Us</h4>
+                                    <p class="text-slate-400 text-lg">(361) 905-0555</p>
+                                    <p class="text-xs text-slate-500">Mon-Fri: 9am - 5pm</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="bg-slate-800 p-3 text-orange-500 rounded-sm">
+                                    <i data-lucide="clock" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-bold uppercase">Quick Estimates</h4>
+                                    <p class="text-slate-400">Most quotes provided within 24 hours.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- REPLACED FORM WITH CALL BUTTON CARD -->
+                    <div class="bg-slate-800 border-t-4 border-orange-600 p-6 md:p-8 flex flex-col justify-center items-center text-center h-full mt-4 md:mt-0">
+                        <h3 class="text-xl md:text-2xl font-bold text-white mb-4 uppercase">Ready to get started?</h3>
+                        <p class="text-slate-400 mb-8">Give us a call to discuss your project directly.</p>
+                        
+                        <a 
+                            href="tel:+13619050555" 
+                            class="w-full bg-orange-600 hover:bg-orange-700 text-white text-xl md:text-3xl font-bold uppercase py-6 px-4 tracking-wider transition-colors rounded-sm flex items-center justify-center gap-3"
+                        >
+                            <i data-lucide="phone" class="w-8 h-8"></i> (361) 905-0555
+                        </a>
+                        
+                        <p class="text-slate-500 text-sm mt-4 font-bold uppercase tracking-widest">
+                            Click to Call Now
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 py-12 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex flex-col items-center md:items-start text-center md:text-left">
+                <span class="text-2xl font-bold tracking-tighter text-white font-oswald">
+                    PARAMOUNT <span class="text-orange-600">PLASTICS</span>
+                </span>
+                <p class="text-slate-500 text-sm mt-2">Fabrication & Repair in Corpus Christi, TX.</p>
+            </div>
+            <div class="text-slate-600 text-sm text-center md:text-right">
+                &copy; <span id="year"></span> Paramount Plastics. All rights reserved.<br/>
+                Designed for the hardworking folks of the Coastal Bend.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Logic Script -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Footer Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Navbar Scroll Logic
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-slate-900/95', 'shadow-lg', 'border-b', 'border-slate-800', 'py-3');
+                navbar.classList.remove('bg-transparent', 'md:py-5');
+            } else {
+                navbar.classList.remove('bg-slate-900/95', 'shadow-lg', 'border-b', 'border-slate-800', 'py-3');
+                navbar.classList.add('bg-transparent', 'md:py-5');
+            }
+        });
+
+        // Mobile Menu Logic
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            // Toggle Icon
+            const icon = mobileMenu.classList.contains('hidden') ? 'menu' : 'x';
+            menuBtn.innerHTML = `<i data-lucide="${icon}" class="w-8 h-8"></i>`;
+            lucide.createIcons();
+        });
+
+        // Close mobile menu on link click
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuBtn.innerHTML = `<i data-lucide="menu" class="w-8 h-8"></i>`;
+                lucide.createIcons();
+            });
+        });
+
+    </script>
+</body>
+</html>
